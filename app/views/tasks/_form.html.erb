@@ -1,0 +1,17 @@
+<div>
+<%= form_with model: task do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :details %>
+    <%= f.text_field :details %>
+  </p>
+  <%= f.submit class:"btn btn-primary" %>
+<% end %>
+</div>
+<hr>
+<div>
+  <%= link_to '<i class="fa-solid fa-backward"></i> Back to list'.html_safe, tasks_path, class: "link" %>
+</div>

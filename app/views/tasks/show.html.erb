@@ -1,0 +1,10 @@
+<div class="d-flex">
+  <div class="p-2 flex-grow-1"><h2><%= @task.title %></h2></div>
+  <div class="p-2"><%= link_to '<i class="fa-solid fa-file-pen"></i> Edit this task'.html_safe, edit_task_path, class: "link" %></div>
+</div>
+<p><%= @task.details %></p>
+<p><%= @task.completed  ? '<i class="fa-regular fa-square-check"></i> This task is completed'.html_safe  : '<i class="fa-regular fa-square"></i> This task is not completed yet'.html_safe %></p>
+<hr>
+<div>
+  <%= link_to '<i class="fa-solid fa-backward"></i> Back to list'.html_safe, tasks_path, class: "link" %>
+</div>
